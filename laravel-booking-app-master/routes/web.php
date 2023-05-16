@@ -25,3 +25,7 @@
 
     // User
     Route::get('/user','UserController@index');
+
+    Route::get('toyyibpay', 'ToyyibpayController@createBill')->name('toyyibpay-create');
+    Route::get('toyyibpay-status', 'ToyyibpayController@paymentStatus')->name('toyyibpay-status');
+    Route::post('toyyibpay-callback', 'ToyyibpayController@callback')->name('toyyibpay-callback');
